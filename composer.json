@@ -49,7 +49,7 @@
     }
   },
   "scripts": {
-    "post-install-cmd": "npm install",
+    "post-install-cmd": "npm install && npm install https://github.com/zoonru/puphpeteer/tarball/zoon",
     "test": "./vendor/bin/phpunit",
     "update-docs": "php bin/console doc:generate",
     "stan": "vendor/bin/phpstan analyze src",

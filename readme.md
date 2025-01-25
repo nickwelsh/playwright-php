@@ -10,12 +10,6 @@ Install via Composer:
 composer require playwright-php
 ```
 
-Install npm dependencies:
-
-```bash
-npm install https://github.com/zoonru/puphpeteer/tarball/zoon
-```
-
 Install browser binaries:
 
 ```bash
