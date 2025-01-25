@@ -47,8 +47,13 @@
       "PlaywrightPhp\\Tests\\": "tests/"
     }
   },
+  "extra": {
+    "npm": {
+      "install-command": "npm install https://github.com/zoonru/puphpeteer/tarball/zoon"
+    }
+  },
   "scripts": {
-    "post-install-cmd": "npm install && npm install https://github.com/zoonru/puphpeteer/tarball/zoon",
+    "post-install-cmd": "npm install",
     "test": "./vendor/bin/phpunit",
     "update-docs": "php bin/console doc:generate",
     "stan": "vendor/bin/phpstan analyze src",
