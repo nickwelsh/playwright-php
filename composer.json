@@ -1,0 +1,61 @@
+{
+  "name": "victor-teles/playwright-php",
+  "description": "A Playwright bridge for PHP.",
+  "keywords": [
+    "php",
+    "playwright",
+    "headless-browser",
+    "testing",
+    "web",
+    "developer-tools",
+    "automation"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Victor Teles",
+      "email": "contact@victormesquita.dev",
+      "homepage": "https://github.com/victor-teles"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "composer/semver": "^3.0",
+    "zoon/rialto": "^1.5",
+    "psr/log": "^3.0",
+    "thecodingmachine/safe": "^2.5"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.2",
+    "monolog/monolog": "^3.0",
+    "phpstan/phpstan": "^1.10",
+    "phpunit/phpunit": "^11",
+    "symfony/console": "^7",
+    "symfony/filesystem": "^7",
+    "symfony/process": "^7",
+    "symfony/var-dumper": "^7",
+    "thecodingmachine/phpstan-safe-rule": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "PlaywrightPhp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PlaywrightPhp\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": "npm install",
+    "test": "./vendor/bin/phpunit",
+    "update-docs": "php bin/console doc:generate",
+    "stan": "vendor/bin/phpstan analyze src",
+    "format": "vendor/bin/php-cs-fixer fix src"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
