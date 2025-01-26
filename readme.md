@@ -1,6 +1,16 @@
-# Playwright PHP
+<img alt="playwright-php banner" src="https://github.com/victor-teles/playwright-php/raw/main/.github/banner.webp"/>
 
-A PHP library for automating browsers using [Playwright](https://playwright.dev/).
+<div align="center">
+    <img src="https://badgen.net/npm/v/playwright-php?" alt="NPM Version" />
+    <img src="https://github.com/victor-teles/playwright-php/actions/workflows/ci.yaml/badge.svg" alt="Build Status" />
+</a>
+</div>
+<br />
+
+<div align="center"><strong>A PHP library for automating browsers using [Playwright](https://playwright.dev/).</strong></div>
+
+<br />
+
 
 ## Installation
 
