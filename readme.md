@@ -1,4 +1,7 @@
-<img alt="playwright-php banner" src="https://github.com/victor-teles/playwright-php/raw/main/.github/banner.webp"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/victor-teles/playwright-php/raw/main/.github/banner-dark.webp">
+  <img alt="playwright-php banner" src="https://github.com/victor-teles/playwright-php/raw/main/.github/banner.webp">
+</picture>
 
 <div align="center">
     <img src="https://badgen.net/npm/v/playwright-php?" alt="NPM Version" />
