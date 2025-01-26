@@ -7,7 +7,7 @@
 </div>
 <br />
 
-<div align="center"><strong>A PHP library for automating browsers using [Playwright](https://playwright.dev/).</strong></div>
+<div align="center"><strong>A PHP library for automating browsers using <a target="_blank" href="https://playwright.dev/">Playwright</a>.</strong></div>
 
 <br />
 
