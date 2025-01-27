@@ -25,7 +25,7 @@ composer require playwright-php
 Install npm dependencies:
 
 ```bash
-npm install https://github.com/zoonru/puphpeteer/tarball/zoon
+npm install https://github.com/victor-teles/playwright-php/tarball/main 
 ```
 
 Install browser binaries:
