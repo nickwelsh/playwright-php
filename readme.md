@@ -19,7 +19,7 @@
 Install via Composer:
 
 ```bash
-composer require playwright-php
+composer require victor-teles/playwright-php
 ```
 
 Install npm dependencies:
