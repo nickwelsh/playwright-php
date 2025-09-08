@@ -97,7 +97,7 @@ final class GenerateDocumentationCommand extends Command
     {
         return array_map(static function (string $filePath): string {
             return explode('.', basename($filePath))[0];
-        }, glob(self::RESOURCES_DIR.'/*'));
+        }, \Safe\glob(self::RESOURCES_DIR.'/*'));
     }
 
     private static function generatePhpDocWithDocumentation(array $classDocumentation): ?string
@@ -142,7 +142,7 @@ final class GenerateDocumentationCommand extends Command
 
         $fileName = $reflectionClass->getFileName();
 
-        $contents = file_get_contents($fileName);
+        $contents = \Safe\file_get_contents($fileName);
 
         // If there already is a doc comment, replace it.
         if ($doc = $reflectionClass->getDocComment()) {
@@ -158,7 +158,7 @@ final class GenerateDocumentationCommand extends Command
             $newContents = implode("\n", array_merge($before, explode("\n", $phpDoc), $after));
         }
 
-        file_put_contents($fileName, $newContents);
+        \Safe\file_put_contents($fileName, $newContents);
     }
 
     /**
@@ -209,15 +209,15 @@ final class GenerateDocumentationCommand extends Command
 
     private static function rmdirRecursive(string $dir): bool
     {
-        $files = scandir($dir);
+        $files = \Safe\scandir($dir);
         if (! \is_array($files)) {
             return false;
         }
         $files = array_diff($files, ['.', '..']);
         foreach ($files as $file) {
-            (is_dir("{$dir}/{$file}")) ? self::rmdirRecursive("{$dir}/{$file}") : unlink("{$dir}/{$file}");
+            (is_dir("{$dir}/{$file}")) ? self::rmdirRecursive("{$dir}/{$file}") : \Safe\unlink("{$dir}/{$file}");
         }
 
-        return rmdir($dir);
+        return \Safe\rmdir($dir);
     }
 }

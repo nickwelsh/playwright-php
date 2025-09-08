@@ -84,14 +84,14 @@ class Playwright extends AbstractEntryPoint
         $process = new Process([$nodePath, __DIR__.'/get-playwright-version.js']);
         $process->mustRun();
 
-        return json_decode($process->getOutput(), true, 10, JSON_THROW_ON_ERROR);
+        return \Safe\json_decode($process->getOutput(), true, 10, JSON_THROW_ON_ERROR);
     }
 
     private function acceptedPlaywrightVersion(): string
     {
         $npmManifestPath = __DIR__.'/../package.json';
-        $contents = file_get_contents($npmManifestPath) ?: throw new Exception('Cant load file');
-        $npmManifest = json_decode($contents, false, 10, JSON_THROW_ON_ERROR);
+        $contents = \Safe\file_get_contents($npmManifestPath) ?: throw new Exception('Cant load file');
+        $npmManifest = \Safe\json_decode($contents, false, 10, JSON_THROW_ON_ERROR);
 
         return $npmManifest->dependencies->playwright;
     }

@@ -17,7 +17,7 @@ class PlaywrightProcessDelegate implements ShouldHandleProcessDelegation
             return $class;
         }
 
-        $classWithoutCDP = 'PlaywrightPhp\\Resources\\'. preg_replace('/^Cdp/i', '', $className);
+        $classWithoutCDP = 'PlaywrightPhp\\Resources\\'. \Safe\preg_replace('/^Cdp/i', '', $className);
 
         if (class_exists($classWithoutCDP)) {
             return $classWithoutCDP;
